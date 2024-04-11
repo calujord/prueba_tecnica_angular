@@ -1,0 +1,22 @@
+<form id="tableSearch" [formGroup]="tableSearch" (input)="onFormChange()">
+  <label>
+    User Name:
+    <input id="userName" type="text" formControlName="userName" />
+  </label>
+  <label>
+    First Name:
+    <input id="firstName" type="text" formControlName="firstName" />
+  </label>
+
+  <label>
+    Last Name:
+    <input id="lastName" type="text" formControlName="lastName" />
+  </label>
+</form>
+<ag-grid-angular
+  id="datatable"
+  class="ag-theme-quartz-auto-dark"
+  [rowData]="filteredData$ | async"
+  [columnDefs]="colDefs"
+>
+</ag-grid-angular>
