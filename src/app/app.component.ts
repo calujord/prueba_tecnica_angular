@@ -7,6 +7,5 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [DatatableComponent, HttpClientModule],
   selector: 'app-root',
   templateUrl: './app.template.html',
-  styleUrl: './app.styles.css',
 })
 export class AppComponent {}

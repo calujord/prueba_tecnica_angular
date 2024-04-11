@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
+import { People } from '../interfaces/addressInfo';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +9,10 @@ import { Observable, map } from 'rxjs';
 export class ApiService {
   constructor(public httpClient: HttpClient) {}
 
-  public getData(): Observable<any> {
-    console.log('trying to get data');
+  /**
+   *  Call API and return list of People in the response, as an Observable.
+   */
+  public getData(): Observable<People[]> {
     return this.httpClient
       .get(
         'https://services.odata.org/TripPinRESTierService/%28S%28j1rncy232ruwwt3enbdp2ajy%29%29/People'

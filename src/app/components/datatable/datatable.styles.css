@@ -1,3 +1,7 @@
 ag-grid-angular {
-  height: 95vh;
+  height: 91vh;
+}
+
+input {
+  margin: 2vh;
 }

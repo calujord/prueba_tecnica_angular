@@ -3,30 +3,15 @@ import {
   addressInfoGetter,
   cityValueGetter,
   nullValueFormatter,
-} from './columnDefinitions.helpers';
+} from '../../helpers/columnDefinitions.helpers';
 
-export const columnKeys = [
-  'UserName',
-  'FirstName',
-  'LastName',
-  'MiddleName',
-  'Gender',
-  'Age',
-  'Emails',
-  'FavoriteFeature',
-  'Features',
-  'AddressInfo',
-  'HomeAddress',
-];
 
-export const defaultColDef: ColDef[] = [
-  {
-    pinned: false,
-    rowDrag: false,
-  },
-];
-
+/***
+ *  Contains the definitions and properties of each column displayed in the table
+ *  More info on: https://ag-grid.com/angular-data-grid/column-properties/
+ */
 export const colDefs: (ColDef | ColGroupDef)[] = [
+  { field: 'UserName' },
   { field: 'FirstName' },
   { field: 'LastName' },
   { field: 'MiddleName' },
@@ -36,7 +21,7 @@ export const colDefs: (ColDef | ColGroupDef)[] = [
   { field: 'FavoriteFeature' },
   { field: 'Features' },
   {
-    headerName: 'AddressInfo',
+    headerName: 'Address Info',
     children: [
       {
         field: 'Address',
